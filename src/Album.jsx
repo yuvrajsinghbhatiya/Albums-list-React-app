@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './Album.css';
+import React, { useState, useEffect } from 'react'; //import react, useState, useEffect
+import axios from 'axios';  //import axios
+import './Album.css'; //import the CSS file
+
+// function Album for the album manager
 
 function Album() {
   const [albums, setAlbums] = useState([]);
@@ -10,7 +12,7 @@ function Album() {
   const [isEmpty, setIsEmpty] = useState(false);
 
 
-
+// useEffect to get the albums from the API
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/albums')
@@ -21,6 +23,9 @@ function Album() {
         console.log(error);
       });
   }, []);
+
+
+// useEffect to check if the albums are empty
 
   const handleAddAlbum = () => {
   if (title.trim() !== '') {
@@ -38,9 +43,12 @@ function Album() {
 };
   
 
+
   const handleUpdateAlbum = (album) => {
     setAlbumToUpdate(album);
   };
+
+  // useEffect to update the album
 
   const handleUpdateFormSubmit = (event) => {
     event.preventDefault();
@@ -70,7 +78,7 @@ function Album() {
     setAlbumToUpdate(null);
   };
 
-
+  // useEffect to delete the album
 
   const handleShowDeleteConfirmation = (album) => {
     setAlbumToDelete(album);
@@ -79,6 +87,8 @@ function Album() {
   const handleCancelDelete = () => {
     setAlbumToDelete(null);
   };
+
+  // useEffect to confirm the delete
 
   const handleConfirmDelete = () => {
     axios.delete(`https://jsonplaceholder.typicode.com/albums/${albumToDelete.id}`)
@@ -92,6 +102,8 @@ function Album() {
       });
   };
 
+  // return the album manager
+  
   return (
     <div className="app-container">
       <h1 className="title">ALBUM MANAGER</h1>
@@ -128,6 +140,8 @@ function Album() {
         ))}
       </ul>
 
+        
+
       {albumToDelete && (
         <div className="modal">
           <div className="modal-content">
@@ -142,5 +156,7 @@ function Album() {
     </div>
   );
 }
+
+// export Album
 
 export default Album;
