@@ -1,0 +1,237 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+    max-width: 45vw;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .album-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .album-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #dbfbff;
+    border: 1px solid #7ee7f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+
+  .album-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .album-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .album-update-button,
+  .album-delete-button {
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+
+  .album-update-button:focus,
+  .album-delete-button:focus {
+    outline: none;
+  }
+  
+  .album-delete-button {
+    background-color: #e74c3c;
+  }
+  
+  .add-album-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .add-album-input {
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+    border-bottom: 2px solid #000000;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  
+  .add-album-input:focus {
+    outline: none;
+    border-bottom-color: #3498db;
+  }
+  
+  .add-album-button {
+    border: none;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+ 
+  .add-album-button:focus {
+    outline: none;
+  }
+  
+
+
+  /* MODALS */
+
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .modal-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+
+  .modbutt{
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  .modbutt2{
+    background-color: #198754;
+    color: white;
+  }  
+
+
+  /* UPDATE MODALS */
+
+ 
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .modal-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .modbutt {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+  }
+  
+  .modbutt2 {
+    background-color: #198754;
+    color: white;
+    border: none;
+
+  }
+  
+  .Update_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .updatein {
+    width: 264px;
+    height: 26px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .Update_button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .cancel-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
